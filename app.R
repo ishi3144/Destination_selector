@@ -12,7 +12,7 @@ library(ggiraph)
 library(shiny)
 library(tidyverse)
 
-data <- read.csv("Touris.csv")
+data <- read.csv("Tourism.csv")
 colnames(data) <- c("Rank","Place","State","Ideal Month","Ideal Trip Time (Days)",
                     "Average Cost", "Average Stay", "Daily Cost", "Attractions",
                     "Rating", "Drinking Age")
