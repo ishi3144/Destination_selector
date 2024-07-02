@@ -1,0 +1,136 @@
+---
+title: "MTH208 Project Report"
+output: html_document
+date: "2023-11-16"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+India, a land of diverse cultures, breathtaking landscapes, and rich historical heritage, stands as a beacon for travelers seeking an immersive and enchanting experience. The tourism sector in India is a vibrant tapestry woven with threads of ancient traditions, modern developments, and a kaleidoscope of natural wonders. Nestled in the heart of South Asia, India has evolved into a captivating destination that beckons explorers from every corner of the globe.
+
+**Cultural Extravaganza:**
+One of the key facets that make India a tourist haven is its unparalleled cultural diversity. From the bustling markets of Delhi to the serene backwaters of Kerala, each region boasts its unique traditions, languages, and culinary delights. The country's historical landmarks, such as the Taj Mahal, Jaipur's Hawa Mahal, and the ancient temples of Varanasi, narrate tales of India's glorious past and architectural marvels.
+
+**Natural Splendor:**
+India's geographical expanse is a treasure trove of natural wonders. From the snow-capped peaks of the Himalayas to the sun-kissed beaches of Goa and the dense jungles of the Western Ghats, the country offers a plethora of landscapes that cater to every traveler's taste. National parks and wildlife sanctuaries, such as Ranthambore and Jim Corbett, provide a glimpse into the diverse flora and fauna, making India an ideal destination for nature enthusiasts and wildlife aficionados.
+
+**Spirituality and Wellness:**
+For those seeking spiritual solace, India is synonymous with a spiritual odyssey. Varied religious sites, including the holy city of Varanasi, the Golden Temple in Amritsar, and the sacred ghats along the Ganges, provide a unique blend of tranquility and religious fervor. The practice of yoga and Ayurveda, deeply rooted in Indian traditions, has attracted wellness seekers from around the world, contributing to the burgeoning wellness tourism industry.
+
+**Modern Marvels:**
+In tandem with its rich heritage, India has embraced modernity, offering world-class infrastructure and amenities to tourists. Vibrant metropolitan cities like Mumbai, Delhi, and Bangalore showcase India's economic prowess and technological advancements. The fusion of tradition and modernity is evident in the burgeoning urban landscapes, contemporary art scenes, and a thriving culinary culture that caters to the cosmopolitan palate.
+
+**Challenges and Opportunities:**
+While India's tourism sector flourishes, it also faces challenges such as infrastructure bottlenecks, environmental concerns, and the need for sustainable tourism practices. Addressing these challenges presents an opportunity for India to enhance its tourism potential while preserving its cultural and natural heritage.
+
+In conclusion, India stands as a multifaceted jewel in the crown of global tourism, inviting visitors to embark on a journey that transcends time and space. This report delves into the nuances of India's tourism industry, exploring its strengths, challenges, and the roadmap for sustainable growth in the years to come.
+
+
+## Data
+
+The data set we will be using for our analysis comprises the top 100 most visited places in India and the data has been scraped from the website Holidify (https://www.holidify.com/country/india/places-to-visit.html) and we have also used the website Wikipedia (https://en.wikipedia.org/wiki/Alcohol_laws_of_India) for the legal age of drinking in each state
+
+The data set comprises 100 observations described using 10 variables. We can divide these variables broadly into two categories: numerical and categorical.
+
+#### Categorical Variables :
+
+  **State or Union Territory :** 
+
+   Each state of India is unique in its own right.
+
+1. **Andhra Pradesh:** "Known for its diverse landscapes, from coastal beauty to ancient temples."
+2. **Arunachal Pradesh:** "A land of pristine wilderness and vibrant tribal cultures in the northeastern       frontier."
+3. **Assam:** "Famed for its tea estates, the Brahmaputra River, and rich biodiversity."
+4. **Bihar:** "A state with a deep historical footprint and religious significance."
+5. **Chhattisgarh:** "Home to dense forests, tribal heritage, and ancient archaeological sites."
+6. **Goa:** "A coastal paradise known for its beaches, nightlife, and Portuguese influence."
+7. **Gujarat:** "Showcasing a harmonious blend of history, industry, and vibrant traditions."
+8. **Haryana:** "A progressive state with a mix of modernity and agricultural landscapes."
+9. **Himachal Pradesh:** "Nestled in the Himalayas, offering serene landscapes and adventure."
+10. **Jharkhand:** "Rich in mineral resources, with a diverse tribal cultural tapestry."
+11. **Karnataka:** "A tech hub with diverse geography, from IT parks to the Western Ghats."
+12. **Kerala:** "Famous for its backwaters, lush landscapes, and cultural richness."
+13. **Madhya Pradesh:** "Heart of India, boasting historical landmarks and wildlife sanctuaries."
+14. **Maharashtra:** "Home to bustling Mumbai, diverse landscapes, and historical landmarks."
+15. **Manipur:** "Known for its scenic beauty, cultural diversity, and ancient traditions."
+16. **Meghalaya:** "Abode of clouds, with breathtaking landscapes and vibrant tribal culture."
+17. **Mizoram:** "A picturesque state with a rich cultural heritage in Northeast India."
+18. **Nagaland:** "Known for its Naga tribes, festivals, and lush green hills."
+19. **Odisha:** "Land of temples, beaches, and a rich tapestry of art and culture."
+20. **Punjab:** "Famous for its agricultural prosperity, vibrant culture, and Sikh heritage."
+21. **Rajasthan:** "A royal state with majestic palaces, forts, and a vibrant desert landscape."
+22. **Sikkim:** "Nestled in the Eastern Himalayas, offering scenic beauty and Buddhist culture."
+23. **Tamil Nadu:** "Home to classical traditions, temples, and the bustling city of Chennai."
+24. **Telangana:** "A state with a rich historical past, modern industries, and cultural diversity."
+25. **Tripura:** "Known for its natural beauty, historic sites, and diverse tribal communities."
+26. **Uttar Pradesh:** "Land of the Taj Mahal, with a rich history and cultural heritage."
+27. **Uttarakhand:** "A state of spiritual significance, adorned with the Himalayas and rivers."
+28. **West Bengal:** "Cultural hub of India, known for Kolkata, the Sunderbans, and Darjeeling."
+  
+  
+  **Places to visit :**
+  
+  The "Places to Visit" column serves as a comprehensive guide to the myriad attractions that adorn the diverse landscape of India. This segment meticulously catalogues the prominent destinations, landmarks, and points of interest that encapsulate the essence of each region. Ranging from historical monuments, natural wonders, and cultural hotspots to modern marvels, this column is a curated compilation of recommendations for travelers seeking a rich and immersive experience in the tapestry of India's tourism offerings.
+
+It acts as a virtual roadmap, guiding tourists through the cultural, historical, and scenic treasures that make India a captivating destination. Each entry in this column is a gateway to exploration, allowing visitors to delve into the unique stories, architectural splendors, and natural beauty that define the soul of the respective regions. From iconic landmarks like the Taj Mahal and Jaipur's Hawa Mahal to the serene backwaters of Kerala and the vibrant markets of Delhi, the "Places to Visit" column beckons travelers to embark on a journey of discovery and appreciation for the diverse facets of India's rich heritage and contemporary allure.
+
+  **Ideal time to visit :**
+  
+The "Ideal Time to Visit a Place" column acts as a strategic compass for travelers, offering invaluable insights into the optimal months for exploring the diverse regions of India. This meticulously curated column provides a month-by-month guide, aligning with the climatic nuances and seasonal highlights of each destination. Tailored to enhance the visitor's experience, it aids in planning by recommending the most favorable periods when weather conditions, festivals, and natural phenomena converge to create an immersive and memorable travel experience.
+
+This column, therefore, becomes an indispensable tool for crafting personalized itineraries, allowing travelers to synchronize their visits with the best conditions for sightseeing, adventure activities, or cultural festivities. It transforms the travel experience from a mere journey to a well-timed exploration, maximizing the potential for an enriching and delightful sojourn through the diverse tapestry of India.
+
+#### **Numerical Variables :**
+
+
+**Ideal duration of visit :**
+
+This column becomes an invaluable resource for travel planning, enabling individuals to allocate their time effectively and make the most of their visit. It ensures that travelers strike a harmonious balance between leisurely immersion in the local culture, exploration of key landmarks, and the flexibility to embrace spontaneous discoveries. In essence, the "Ideal Duration of Visit" column transforms travel from a fleeting experience into a well-paced journey, enhancing the overall satisfaction and depth of engagement with the captivating destinations across India.
+
+**Average cost per trip :**
+
+The "Average Cost Per Trip" column is a pivotal element in our dataset, providing pragmatic insights into the financial considerations associated with exploring the diverse destinations across India. This column serves as a financial compass, offering an estimate of the average expenses one might incur during a visit to a particular place, encompassing accommodation, transportation, meals, attractions, and other miscellaneous expenditures.
+
+**Average stay per trip :**
+
+The "Average Stay Per Trip" column serves as a temporal guidepost, offering valuable insights into the typical duration tourists spend in a given destination. This integral component in our dataset illuminates the temporal rhythm of travel, providing an estimate of the average number of days visitors allocate to immerse themselves in the unique offerings of each locale.
+
+**Average cost of stay per day :**
+The "Average Cost of stay per day" column is a pivotal element in our dataset, providing pragmatic insights into the financial considerations associated with exploring the diverse destinations across India. This column serves as a financial compass, offering an estimate of the average expenses one might incur during a visit to a particular place, encompassing accommodation, transportation, meals, attractions, and other miscellaneous expenditures.
+
+**Number of attractions :**
+
+The "Number of Attractions" column stands as a comprehensive index, quantifying the wealth of experiences that await travelers in each region. This integral component in our dataset provides a numerical representation of the plethora of interesting places and landmarks that contribute to the unique allure of a destination.
+
+**Rating out of 5 :**
+
+The "Rating" column serves as a qualitative compass, distilling the collective sentiments of visitors into a numerical representation that encapsulates the overall satisfaction and appeal of a destination. This pivotal component in our dataset reflects the average rating bestowed upon a place by individuals who have experienced its offerings, ranging from cultural landmarks and natural wonders to modern attractions.
+
+**Legal age of drinking :**
+
+The "Legal Age of Drinking" column acts as a regulatory guide, providing crucial information about the minimum age requirement for the consumption of alcoholic beverages in each region. This essential component in our dataset aims to inform travelers about the legal framework governing alcohol consumption, offering insights into the responsible and culturally sensitive practices associated with each destination.
+
+**Summary Plot:**
+
+It's a scatter plot created using ggplot that displays the relationship between the average cost of trips and the ratings of different locations.
+Each point represents a location, with the x-axis denoting the rating and the y-axis denoting the average cost of the trip.
+The interactivity is added using geom_point_interactive from the ggiraph package, enabling tooltips displaying the place name and coloring the points based on the drinking age.
+The plot is designed to show how the cost of trips varies concerning the ratings of different places.
+
+**Summary Text Output:**
+
+This section provides a textual summary of the summary plot's observations.
+It describes the behavior seen in the plot and provides insights into the relationship between trip cost and location ratings. For instance, it mentions the trend of decreasing costs with ratings up to a certain point, followed by an increase for highly rated locations.
+
+**Destination Selector Tab:**
+
+Contains a table (tableOutput("Summary_t")) displaying information about selected destinations based on the chosen state and month.
+Generates a histogram (plotOutput("pplot1")) showing the number of attractions for different places in the selected state.
+Provides a scatter plot (girafeOutput("pplot2")) showing the relationship between the number of attractions and the average cost of trips for the selected state and month.
+The scatter plot is interactive, displaying tooltips with place names and using color and size to represent the rating.
+
+*When the "Output" button (input$click) is clicked, it filters the data based on the selected state and month. It then generates and updates the various visualizations and summaries based on the filtered data*
